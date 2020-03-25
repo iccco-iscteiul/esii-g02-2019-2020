@@ -57,13 +57,13 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.2</version>
 			</plugin>
-
-
-
-			<plugin>
+			
+			
+			
+<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.5</version>
+				<version>0.8.2</version>
 				<executions>
 					<execution>
 						<goals>
@@ -80,6 +80,11 @@
 					</execution>
 				</executions>
 			</plugin>
+
+
+
+
+
 
 
 		</plugins>
