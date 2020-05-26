@@ -1,5 +1,5 @@
 def dockeruser = "dockerivodocker"
-def imagename = "ubuntu:16"
+def imagename = "ubuntu"
 def container = "apache2"
 node {
    echo 'Building Apache Docker Image'
