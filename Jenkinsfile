@@ -7,6 +7,10 @@ node {
 stage('Git Checkout') {
     git 'https://github.com/iccco-iscteiul/esii-g02-2019-2020'
     }
+	
+stage('TESTE'){
+	powershell "docker-machine ip"
+}
      
 stage('Build Docker Image'){
      powershell "docker build -t  ${imagename} ."
