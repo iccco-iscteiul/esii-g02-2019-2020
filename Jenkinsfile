@@ -20,6 +20,13 @@ stage ('Runing Container to test built Docker Image'){
 stage('Tag Docker Image'){
     powershell "docker tag ${imagename} ${env.dockeruser}/${imagename}"
     }
+
+   stage('Copy JAR'){
+    powershell " docker cp SIDSH-0.0.1-SNAPSHOT.jar ${container}:/usr}"
+  }
+   
+  
+   
    
 stage('Docker Login and Push Image'){
     withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
