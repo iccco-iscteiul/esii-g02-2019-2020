@@ -1,5 +1,5 @@
 def dockeruser = "dockerivodocker"
-def imagename = "openjdk:7"
+def imagename = "openjdk:8"
 def container = "java"
 node {
    echo 'Building Apache Docker Image'
