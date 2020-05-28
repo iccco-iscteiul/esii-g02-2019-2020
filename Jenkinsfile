@@ -13,8 +13,9 @@ stage('Build Docker Image'){
     }
 
 stage ('Runing Container to test built Docker Image'){
-    powershell "docker run -dit --name ${container} ${imagename} -v .:/user openjdk:7"
+    powershell "docker run -dit --name ${container} ${imagename}"
     }
+  
     
 stage('Tag Docker Image'){
     powershell "docker tag ${imagename} ${env.dockeruser}/${imagename}"
