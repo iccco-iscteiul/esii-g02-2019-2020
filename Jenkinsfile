@@ -5,7 +5,7 @@ node {
    echo 'Building Apache Docker Image'
 
 stage ('teste'){
-   powershell "cd\"
+   powershell "cd\\"
    {
      powershell "dir"
     }
