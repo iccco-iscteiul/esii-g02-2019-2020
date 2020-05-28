@@ -11,7 +11,7 @@ stage('Git Checkout') {
 stage('Build Docker Image'){
      powershell "docker build -t  ${imagename} ."
     }
-
+  
 stage ('Runing Container to test built Docker Image'){
     powershell "docker run -dit --name ${container} ${imagename}"
     }
