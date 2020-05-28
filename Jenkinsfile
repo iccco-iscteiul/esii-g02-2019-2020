@@ -19,10 +19,6 @@ stage ('Runing Container to test built Docker Image'){
 stage('Tag Docker Image'){
     powershell "docker tag ${imagename} ${env.dockeruser}/${imagename}"
     }
-
-stage('Copy JAR into java container') { 
-   powershell "copy 'C:/Program Files (x86)/Jenkins/workspace/Package/SIDSH/target/SIDSH-0.0.1-SNAPSHOT.jar' /usr/"
-  }   
    
 stage('Docker Login and Push Image'){
     withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
