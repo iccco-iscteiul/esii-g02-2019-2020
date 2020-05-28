@@ -2,11 +2,8 @@
 from openjdk:7
 # Mainter Name
 maintainer Docker Community
-# Command to update and install Apache packages
-#RUN apt-get update && apt-get install apache2 -y
-# open port 
-#EXPOSE 80
-# Command to run Apache server in background
-#CMD /usr/sbin/apache2ctl -D FOREGROUND
-
-
+# Copy JAR file into java container
+COPY "C:\Program Files (x86)\Jenkins\workspace\Package\SIDSH\target\SIDSH-0.0.1-SNAPSHOT.jar" /usr/app
+WORKDIR /usr/app
+#EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "SIDSH-0.0.1-SNAPSHOT.jar"]
