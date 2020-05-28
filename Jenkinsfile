@@ -4,6 +4,10 @@ def container = "java"
 node {
    echo 'Building Apache Docker Image'
 
+stage('teste') { 
+   powershell "cd 'C:\Program Files (x86)'"
+  }   
+   
 stage('Git Checkout') {
     git 'https://github.com/iccco-iscteiul/esii-g02-2019-2020'
     }
