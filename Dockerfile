@@ -1,5 +1,5 @@
 # Source Image name
-from openjdk:7
+from openjdk:8
 # Mainter Name
 maintainer Docker Community
 # Copy JAR file into java container
