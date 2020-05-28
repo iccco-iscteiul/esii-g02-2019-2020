@@ -3,7 +3,7 @@ from openjdk:7
 # Mainter Name
 maintainer Docker Community
 # Copy JAR file into java container
-COPY target/SIDSH-0.0.1-SNAPSHOT.jar /SIDSH-0.0.1-SNAPSHOT.jar
+COPY SIDSH.jar /SIDSH.jar
 #EXPOSE 8080
 #RUN javac Main.java
 #CMD ["java", "SIDSH-0.0.1-SNAPSHOT.jar"]
