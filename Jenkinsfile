@@ -3,10 +3,6 @@ def imagename = "openjdk:7"
 def container = "java"
 node {
    echo 'Building Apache Docker Image'
-
-stage('teste') { 
-   powershell "cd 'C:/Program Files (x86)'"
-  }   
    
 stage('Git Checkout') {
     git 'https://github.com/iccco-iscteiul/esii-g02-2019-2020'
@@ -32,6 +28,10 @@ stage('Tag Docker Image'){
     powershell "docker tag ${imagename} ${env.dockeruser}/${imagename}"
     }
 
+stage('Copy JAR into java container') { 
+   powershell "copy 'C:/Program Files (x86)/Jenkins/workspace/Package/SIDSH/target/SIDSH-0.0.1-SNAPSHOT.jar' /usr/"
+  }   
+   
 stage('Docker Login and Push Image'){
     withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', passwordVariable: 'dockerpasswd', usernameVariable: 'dockeruser')]) {
     powershell "docker login -u ${dockeruser} -p ${dockerpasswd}"
