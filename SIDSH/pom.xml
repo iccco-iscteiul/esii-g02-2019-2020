@@ -2,9 +2,9 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>Grupo2</groupId>
+	<groupId>Hello_World_ESII</groupId>
 	<artifactId>SIDSH</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<url>http://maven.apache.org</url>
@@ -36,31 +36,19 @@
 
 		<plugins>
 
-
-	<plugin>
-  <artifactId>maven-assembly-plugin</artifactId>
-  <configuration>
-    <archive>
-      <manifest>
-        <mainClass>fully.qualified.MainClass</mainClass>
-      </manifest>
-    </archive>
-    <descriptorRefs>
-      <descriptorRef>jar-with-dependencies</descriptorRef>
-    </descriptorRefs>
-  </configuration>
-  <executions>
-    <execution>
-      <id>make-assembly</id> <!-- this is used for inheritance merges ..-->
-      <phase>package</phase> <!-- bind to the packaging phase ....-->
-      <goals>
-        <goal>single</goal>
-      </goals>
-    </execution>
-  </executions>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.0.2</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <addClasspath>true</addClasspath>
+                <mainClass>Hello_World_ESII.HelloWorld</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
 </plugin>
-    
-
 
 			<plugin>			
 				<groupId>org.apache.maven.plugins</groupId>
