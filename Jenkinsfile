@@ -5,7 +5,7 @@ node {
    echo 'Building Apache Docker Image'
 
 stage('teste') { 
-   powershell "cd 'C:\Program Files (x86)'"
+   powershell "cd 'C:/Program Files (x86)'"
   }   
    
 stage('Git Checkout') {
