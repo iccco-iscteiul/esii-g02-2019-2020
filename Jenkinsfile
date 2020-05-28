@@ -22,7 +22,7 @@ stage('Tag Docker Image'){
     }
 
    stage('Copy JAR'){
-    powershell " docker cp SIDSH-0.0.1-SNAPSHOT.jar ${container}:/usr}"
+    powershell "docker cp SIDSH-0.0.1-SNAPSHOT.jar ${container}:/usr}"
   }
    
   
