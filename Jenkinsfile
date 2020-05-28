@@ -13,7 +13,7 @@ stage('Build Docker Image'){
     }
 
 stage ('Runing Container to test built Docker Image'){
-    powershell "docker run -dit --name ${container} ${imagename} -v "$PWD":/user openjdk:7"
+    powershell "docker run -dit --name ${container} ${imagename} -v '$PWD':/user openjdk:7"
     }
     
 stage('Tag Docker Image'){
