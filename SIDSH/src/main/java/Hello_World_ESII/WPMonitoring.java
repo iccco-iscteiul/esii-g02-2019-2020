@@ -1,5 +1,10 @@
 package Hello_World_ESII;
 
+/**
+ * ESII, SID Software House (SIDSH), WPMonitoring
+ *@author Ivo Carvalho
+ */
+
 /*
  * SELENIUM WEBDRIVER
  * */
@@ -24,6 +29,10 @@ import java.util.concurrent.TimeUnit;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+
+/**
+ * WPMonitoring main class
+ */
 
 public class WPMonitoring extends Thread{
 
