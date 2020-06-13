@@ -49,7 +49,7 @@ public class WPMonitoring extends Thread{
 	public static void main(String[] args) {
 		
 		String xmlPath;
-		xmlPath = args[0];
+		xmlPath = args[0]; //
 		
 		/*
 		ArrayList <TipoTeste> testesLista = new ArrayList <TipoTeste>();
