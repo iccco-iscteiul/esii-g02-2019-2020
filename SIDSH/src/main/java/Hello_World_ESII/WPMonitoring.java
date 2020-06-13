@@ -49,7 +49,7 @@ public class WPMonitoring extends Thread{
 	public static void main(String[] args) {
 		
 		String xmlPath;
-		
+		xmlPath = args[0];
 		
 		/*
 		ArrayList <TipoTeste> testesLista = new ArrayList <TipoTeste>();
@@ -88,7 +88,8 @@ public class WPMonitoring extends Thread{
 		while(x !=0) {
 		x--;
 		//System.setProperty("webdriver.chrome.driver","E:\\ISCTE\\GoogleDrive-Materia\\3ano\\EI_3ano_Semestre2\\ES2_(ENGENHARIA_DE_SOFTWARE_II)\\Projecto\\chromedriver.exe");
-		System.setProperty("webdriver.gecko.driver","E:\\ISCTE\\GoogleDrive-Materia\\3ano\\EI_3ano_Semestre2\\ES2_(ENGENHARIA_DE_SOFTWARE_II)\\Projecto\\geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver","E:\\ISCTE\\GoogleDrive-Materia\\3ano\\EI_3ano_Semestre2\\ES2_(ENGENHARIA_DE_SOFTWARE_II)\\Projecto\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", xmlPath);
 
 		//WebDriver driver = new ChromeDriver();
 		WebDriver driver = new FirefoxDriver();
