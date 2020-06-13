@@ -24,36 +24,59 @@
 			<version>${junit.jupiter.version}</version>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-runner</artifactId>
 			<version>${junit.platform.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
 
 		<plugins>
 
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-jar-plugin</artifactId>
-    <version>3.0.2</version>
-    <configuration>
-        <archive>
-            <manifest>
-                <addClasspath>true</addClasspath>
-                <mainClass>Hello_World_ESII.HelloWorld</mainClass>
-            </manifest>
-        </archive>
-    </configuration>
-</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.0.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<!--<mainClass>Hello_World_ESII.HelloWorld</mainClass> -->
+							<mainClass>Hello_World_ESII.WPMonitoring</mainClass> 
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
 
-			<plugin>			
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
-				 <version>3.2.0</version>
+				<version>3.2.0</version>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
@@ -72,9 +95,9 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.22.2</version>
 			</plugin>
-			
-			
-			
+
+
+
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -95,6 +118,8 @@
 					</execution>
 				</executions>
 			</plugin>
+
+
 
 		</plugins>
 	</build>
