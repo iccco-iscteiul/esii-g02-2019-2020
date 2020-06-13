@@ -122,8 +122,8 @@ public class WPMonitoring extends Thread{
 
 		
 		
-		driver.close(); // close the tab it has opened
-		driver.quit(); // close the browser
+		//driver.close(); // close the tab it has opened
+		//driver.quit(); // close the browser
 		
 		
 		/* TEST THRESHOLD */
