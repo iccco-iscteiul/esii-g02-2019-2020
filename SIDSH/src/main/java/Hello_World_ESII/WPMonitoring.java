@@ -93,6 +93,17 @@ public class WPMonitoring extends Thread{
 		//WebDriver driver = new ChromeDriver();
 		WebDriver driver = new FirefoxDriver();
 				
+		/* LOGIN */
+		
+		driver.get("http://192.168.99.100:8000/wp-login.php");
+		//driver.manage().window().maximize();
+		WebElement login1 = driver.findElement(By.name("log"));
+		login1.sendKeys("Administrator");
+		WebElement login2 = driver.findElement(By.name("pwd"));
+		login2.sendKeys("Administrator");		
+		WebElement login3 = driver.findElement(By.name("wp-submit"));
+		login3.submit();
+		
 		
 		/* CONTACT FORM */
 		driver.get("http://192.168.99.100:8000/contact/");
@@ -109,15 +120,6 @@ public class WPMonitoring extends Thread{
 		contact6.submit();
 		
 
-		/* LOGIN */
-		driver.get("http://192.168.99.100:8000/wp-login.php");
-		//driver.manage().window().maximize();
-		WebElement login1 = driver.findElement(By.name("log"));
-		login1.sendKeys("Administrator");
-		WebElement login2 = driver.findElement(By.name("pwd"));
-		login2.sendKeys("Administrator");		
-		WebElement login3 = driver.findElement(By.name("wp-submit"));
-		login3.submit();
 		
 		
 		driver.close(); // close the tab it has opened
