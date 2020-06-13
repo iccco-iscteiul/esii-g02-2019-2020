@@ -9,7 +9,7 @@ stage('Git Checkout') {
     }
     
 stage('Build Docker Image'){
-     powershell "docker build -t  ${imagename} ."
+     powershell "docker build -t ${imagename} ."
     }
   
 stage ('Runing Container to test built Docker Image'){
